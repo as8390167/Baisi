@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WYTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+   
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    self.window.rootViewController = [[WYTabBarController alloc] init];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D03484131E8A5DC900A8F6BE"
-               BuildableName = "Baisi.app"
+               BuildableName = "&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;.app"
                BlueprintName = "Baisi"
                ReferencedContainer = "container:Baisi.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D03484131E8A5DC900A8F6BE"
-            BuildableName = "Baisi.app"
+            BuildableName = "&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;.app"
             BlueprintName = "Baisi"
             ReferencedContainer = "container:Baisi.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D03484131E8A5DC900A8F6BE"
-            BuildableName = "Baisi.app"
+            BuildableName = "&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;.app"
             BlueprintName = "Baisi"
             ReferencedContainer = "container:Baisi.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D03484131E8A5DC900A8F6BE"
-            BuildableName = "Baisi.app"
+            BuildableName = "&#x767e;&#x601d;&#x4e0d;&#x5f97;&#x59d0;.app"
             BlueprintName = "Baisi"
             ReferencedContainer = "container:Baisi.xcodeproj">
          </BuildableReference>

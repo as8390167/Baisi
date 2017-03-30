@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  Baisi
+//
+//  Created by SW on 2017/3/30.
+//  Copyright © 2017年 WY. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "WYConst.h"
+
+
+#define WYNoteCenter   [NSNotificationCenter defaultCenter]
+#define WYUserDefaults [NSUserDefaults standardUserDefaults]
+#ifdef DEBUG
+#define WYLog(...)       NSLog(__VA_ARGS__)
+#else
+#define WYLog(...)
+#endif
+
+#define WYLogFunc       WYLog(@"%s", __func__)
+#define WYRGBColor(r,g,b)   [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define WYScreenW [UIScreen mainScreen].bounds.size.width
+#define WYScreenH [UIScreen mainScreen].bounds.size.height
+
+#endif 
+
