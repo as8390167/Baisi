@@ -10,4 +10,9 @@
 
 @implementation WYEssenceViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    self.title = @"精华";
+    self.view.backgroundColor = WYRandomColor;
+}
 @end

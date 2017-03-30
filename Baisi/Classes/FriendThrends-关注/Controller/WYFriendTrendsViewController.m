@@ -10,4 +10,9 @@
 
 @implementation WYFriendTrendsViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    self.title = @"关注";
+    self.view.backgroundColor = WYRandomColor;
+}
 @end

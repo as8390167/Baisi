@@ -10,4 +10,10 @@
 
 @implementation WYMeViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    self.title = @"我";
+    self.view.backgroundColor = WYRandomColor;
+    
+}
 @end

@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		30B4C117B71EB8D25D725B6A /* libPods-Baisi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCA8467E5DCAB43B8714F0D /* libPods-Baisi.a */; };
+		D012EFC11E8CEF5500BC28A1 /* WYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFC01E8CEF5500BC28A1 /* WYPublishViewController.m */; };
+		D012EFC91E8D213A00BC28A1 /* WYNullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFC61E8D213A00BC28A1 /* WYNullViewController.m */; };
+		D012EFCA1E8D213A00BC28A1 /* WYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFC81E8D213A00BC28A1 /* WYTabBarController.m */; };
 		D03484241E8A5DC900A8F6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03484231E8A5DC900A8F6BE /* Assets.xcassets */; };
 		D0B188DA1E8C9A5500C1C241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188D81E8C9A5500C1C241 /* AppDelegate.m */; };
 		D0B188DB1E8C9A5500C1C241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188D91E8C9A5500C1C241 /* main.m */; };
-		D0B188DE1E8C9AFC00C1C241 /* WYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188DD1E8C9AFC00C1C241 /* WYTabBarController.m */; };
 		D0B188E11E8C9B2400C1C241 /* WYEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188E01E8C9B2400C1C241 /* WYEssenceViewController.m */; };
 		D0B188E71E8CA4EA00C1C241 /* WYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188E61E8CA4EA00C1C241 /* WYConst.m */; };
 		D0B188EE1E8CA89E00C1C241 /* WYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188ED1E8CA89E00C1C241 /* WYNewViewController.m */; };
@@ -23,14 +25,18 @@
 		60B99E1630FFCA95FBC14FB9 /* Pods-Baisi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.release.xcconfig"; sourceTree = "<group>"; };
 		96E1C24611C022BA36FABC9B /* Pods-Baisi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baisi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Baisi/Pods-Baisi.debug.xcconfig"; sourceTree = "<group>"; };
 		BBCA8467E5DCAB43B8714F0D /* libPods-Baisi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Baisi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D012EFBF1E8CEF5500BC28A1 /* WYPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublishViewController.h; sourceTree = "<group>"; };
+		D012EFC01E8CEF5500BC28A1 /* WYPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublishViewController.m; sourceTree = "<group>"; };
+		D012EFC51E8D213A00BC28A1 /* WYNullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNullViewController.h; sourceTree = "<group>"; };
+		D012EFC61E8D213A00BC28A1 /* WYNullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNullViewController.m; sourceTree = "<group>"; };
+		D012EFC71E8D213A00BC28A1 /* WYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTabBarController.h; sourceTree = "<group>"; };
+		D012EFC81E8D213A00BC28A1 /* WYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTabBarController.m; sourceTree = "<group>"; };
 		D03484141E8A5DC900A8F6BE /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03484231E8A5DC900A8F6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D03484281E8A5DC900A8F6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B188D71E8C9A5500C1C241 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0B188D81E8C9A5500C1C241 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D0B188D91E8C9A5500C1C241 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D0B188DC1E8C9AFC00C1C241 /* WYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTabBarController.h; sourceTree = "<group>"; };
-		D0B188DD1E8C9AFC00C1C241 /* WYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTabBarController.m; sourceTree = "<group>"; };
 		D0B188DF1E8C9B2400C1C241 /* WYEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYEssenceViewController.h; sourceTree = "<group>"; };
 		D0B188E01E8C9B2400C1C241 /* WYEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYEssenceViewController.m; sourceTree = "<group>"; };
 		D0B188E21E8C9B7A00C1C241 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -254,8 +260,6 @@
 				D0B188E81E8CA5F600C1C241 /* Category */,
 				D0B188D71E8C9A5500C1C241 /* AppDelegate.h */,
 				D0B188D81E8C9A5500C1C241 /* AppDelegate.m */,
-				D0B188DC1E8C9AFC00C1C241 /* WYTabBarController.h */,
-				D0B188DD1E8C9AFC00C1C241 /* WYTabBarController.m */,
 				D0B188E51E8CA4EA00C1C241 /* WYConst.h */,
 				D0B188E61E8CA4EA00C1C241 /* WYConst.m */,
 				D0B188E21E8C9B7A00C1C241 /* PrefixHeader.pch */,
@@ -267,6 +271,10 @@
 		D0B188D01E8C997900C1C241 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D012EFC51E8D213A00BC28A1 /* WYNullViewController.h */,
+				D012EFC61E8D213A00BC28A1 /* WYNullViewController.m */,
+				D012EFC71E8D213A00BC28A1 /* WYTabBarController.h */,
+				D012EFC81E8D213A00BC28A1 /* WYTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +306,8 @@
 		D0B188D41E8C997900C1C241 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D012EFBF1E8CEF5500BC28A1 /* WYPublishViewController.h */,
+				D012EFC01E8CEF5500BC28A1 /* WYPublishViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -451,13 +461,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D012EFC11E8CEF5500BC28A1 /* WYPublishViewController.m in Sources */,
 				D0B188F41E8CA8F200C1C241 /* WYMeViewController.m in Sources */,
+				D012EFC91E8D213A00BC28A1 /* WYNullViewController.m in Sources */,
 				D0B188DB1E8C9A5500C1C241 /* main.m in Sources */,
 				D0B188EE1E8CA89E00C1C241 /* WYNewViewController.m in Sources */,
+				D012EFCA1E8D213A00BC28A1 /* WYTabBarController.m in Sources */,
 				D0B188E11E8C9B2400C1C241 /* WYEssenceViewController.m in Sources */,
 				D0B188E71E8CA4EA00C1C241 /* WYConst.m in Sources */,
 				D0B188DA1E8C9A5500C1C241 /* AppDelegate.m in Sources */,
-				D0B188DE1E8C9AFC00C1C241 /* WYTabBarController.m in Sources */,
 				D0B188F11E8CA8D600C1C241 /* WYFriendTrendsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

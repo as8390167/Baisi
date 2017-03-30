@@ -10,4 +10,9 @@
 
 @implementation WYNewViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    self.title = @"新帖";
+    self.view.backgroundColor = WYRandomColor;
+}
 @end
