@@ -32,26 +32,10 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    WYEssenceViewController *essenceVC = [[WYEssenceViewController alloc] init];
-    essenceVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_essence_icon"];
-    essenceVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_essence_click_icon"];
-    
-    WYNewViewController *newVC = [[WYNewViewController alloc] init];
-    newVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    newVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
-    
-    WYFriendTrendsViewController *friendTrendVC = [[WYFriendTrendsViewController alloc] init];
-    friendTrendVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
-    friendTrendVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
-    
-    WYMeViewController *meVC = [[WYMeViewController alloc] init];
-    meVC.tabBarItem.image = [UIImage imageNamed:@"tabBar_me_icon"];
-    meVC.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_me_click_icon"];
-    
-    [self addChildViewController:essenceVC];
-    [self addChildViewController:newVC];
-    [self addChildViewController:friendTrendVC];
-    [self addChildViewController:meVC];
+    [self setupChildVC:[[WYEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+    [self setupChildVC:[[WYNewViewController alloc] init] title:@"关注" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    [self setupChildVC:[[WYFriendTrendsViewController alloc] init] title:@"新帖" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupChildVC:[[WYMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
 }
 
 -(void)setupChildVC:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage{
