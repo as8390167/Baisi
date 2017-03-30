@@ -11,6 +11,7 @@
 		D012EFC11E8CEF5500BC28A1 /* WYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFC01E8CEF5500BC28A1 /* WYPublishViewController.m */; };
 		D012EFC91E8D213A00BC28A1 /* WYNullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFC61E8D213A00BC28A1 /* WYNullViewController.m */; };
 		D012EFCA1E8D213A00BC28A1 /* WYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFC81E8D213A00BC28A1 /* WYTabBarController.m */; };
+		D012EFCD1E8D310900BC28A1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFCC1E8D310900BC28A1 /* UIView+Extension.m */; };
 		D03484241E8A5DC900A8F6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03484231E8A5DC900A8F6BE /* Assets.xcassets */; };
 		D0B188DA1E8C9A5500C1C241 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188D81E8C9A5500C1C241 /* AppDelegate.m */; };
 		D0B188DB1E8C9A5500C1C241 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188D91E8C9A5500C1C241 /* main.m */; };
@@ -31,6 +32,8 @@
 		D012EFC61E8D213A00BC28A1 /* WYNullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNullViewController.m; sourceTree = "<group>"; };
 		D012EFC71E8D213A00BC28A1 /* WYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTabBarController.h; sourceTree = "<group>"; };
 		D012EFC81E8D213A00BC28A1 /* WYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTabBarController.m; sourceTree = "<group>"; };
+		D012EFCB1E8D310900BC28A1 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D012EFCC1E8D310900BC28A1 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		D03484141E8A5DC900A8F6BE /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03484231E8A5DC900A8F6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D03484281E8A5DC900A8F6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 		D0B188E81E8CA5F600C1C241 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D012EFCB1E8D310900BC28A1 /* UIView+Extension.h */,
+				D012EFCC1E8D310900BC28A1 /* UIView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 				D012EFCA1E8D213A00BC28A1 /* WYTabBarController.m in Sources */,
 				D0B188E11E8C9B2400C1C241 /* WYEssenceViewController.m in Sources */,
 				D0B188E71E8CA4EA00C1C241 /* WYConst.m in Sources */,
+				D012EFCD1E8D310900BC28A1 /* UIView+Extension.m in Sources */,
 				D0B188DA1E8C9A5500C1C241 /* AppDelegate.m in Sources */,
 				D0B188F11E8CA8D600C1C241 /* WYFriendTrendsViewController.m in Sources */,
 			);
