@@ -12,6 +12,7 @@
 #import "WYEssenceViewController.h"
 #import "WYFriendTrendsViewController.h"
 #import "WYMeViewController.h"
+#import "WYNavigationController.h"
 
 @interface WYTabBarController()
 
@@ -42,12 +43,15 @@
     self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar-light"];
     
     [self setupChildVC:[[WYEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
-    [self setupChildVC:[[WYNewViewController alloc] init] title:@"关注" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    
+    [self setupChildVC:[[WYNewViewController alloc] init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    
     [self setupChildVC:[[WYNullViewController alloc] init] title:@"" image:@"" selectedImage:@""];
-    [self setupChildVC:[[WYFriendTrendsViewController alloc] init] title:@"新帖" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    
+    [self setupChildVC:[[WYFriendTrendsViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    
     [self setupChildVC:[[WYMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
-   // [self setupPublish];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -59,9 +63,15 @@
     
     vc.navigationItem.title = title;
     vc.tabBarItem.title = title;
-    vc.tabBarItem.image = [UIImage imageNamed:image];
-    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    [self addChildViewController:vc];
+    if (image.length > 0) {
+        vc.tabBarItem.image = [UIImage imageNamed:image];
+    }
+    if (selectedImage.length > 0) {
+        vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    }
+    
+    WYNavigationController *nav = [[WYNavigationController alloc] initWithRootViewController:vc];
+    [self addChildViewController:nav];
 }
 
 -(void)setupPublish{
@@ -81,7 +91,6 @@
 
 -(void)publishBtnClick{
     
-    NSLog(@"123213213");
     WYLogFunc;
 }
 @end

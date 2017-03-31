@@ -11,10 +11,4 @@
 @implementation WYNullViewController
 
 
--(void)viewDidLoad{
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
-}
-
-
 @end

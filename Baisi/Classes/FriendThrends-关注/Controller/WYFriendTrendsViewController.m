@@ -12,7 +12,17 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    self.title = @"关注";
-    self.view.backgroundColor = WYRandomColor;
+    
+    self.view.backgroundColor = WYGlboalBg;
 }
+
+-(void)setupNav{
+    
+    //self.navigationItem.leftBarButtonItem =
+}
+
+- (IBAction)loginRegisterClick {
+    WYLogFunc;
+}
+
 @end
