@@ -12,6 +12,11 @@
 		D012EFC91E8D213A00BC28A1 /* WYNullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFC61E8D213A00BC28A1 /* WYNullViewController.m */; };
 		D012EFCA1E8D213A00BC28A1 /* WYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFC81E8D213A00BC28A1 /* WYTabBarController.m */; };
 		D012EFCD1E8D310900BC28A1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EFCC1E8D310900BC28A1 /* UIView+Extension.m */; };
+		D01DDFEE1E8F583C00A05DD1 /* WYRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DDFEC1E8F583C00A05DD1 /* WYRecommendViewController.m */; };
+		D01DDFEF1E8F583C00A05DD1 /* WYRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01DDFED1E8F583C00A05DD1 /* WYRecommendViewController.xib */; };
+		D01DDFF31E8F7FC900A05DD1 /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DDFF21E8F7FC900A05DD1 /* NetworkTools.m */; };
+		D01DDFF71E8F9FD400A05DD1 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DDFF61E8F9FD400A05DD1 /* Foundation+Log.m */; };
+		D01DDFFA1E8FA3D500A05DD1 /* WYRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D01DDFF91E8FA3D500A05DD1 /* WYRecommendCategory.m */; };
 		D03484241E8A5DC900A8F6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03484231E8A5DC900A8F6BE /* Assets.xcassets */; };
 		D0368E9B1E8DE66400CF851E /* WYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0368E9A1E8DE66400CF851E /* WYNavigationController.m */; };
 		D0368E9D1E8E343200CF851E /* WYFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0368E9C1E8E343200CF851E /* WYFriendTrendsViewController.xib */; };
@@ -37,6 +42,14 @@
 		D012EFC81E8D213A00BC28A1 /* WYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTabBarController.m; sourceTree = "<group>"; };
 		D012EFCB1E8D310900BC28A1 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		D012EFCC1E8D310900BC28A1 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D01DDFEB1E8F583C00A05DD1 /* WYRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYRecommendViewController.h; sourceTree = "<group>"; };
+		D01DDFEC1E8F583C00A05DD1 /* WYRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYRecommendViewController.m; sourceTree = "<group>"; };
+		D01DDFED1E8F583C00A05DD1 /* WYRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYRecommendViewController.xib; sourceTree = "<group>"; };
+		D01DDFF11E8F7FC900A05DD1 /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
+		D01DDFF21E8F7FC900A05DD1 /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
+		D01DDFF61E8F9FD400A05DD1 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		D01DDFF81E8FA3D500A05DD1 /* WYRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYRecommendCategory.h; sourceTree = "<group>"; };
+		D01DDFF91E8FA3D500A05DD1 /* WYRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYRecommendCategory.m; sourceTree = "<group>"; };
 		D03484141E8A5DC900A8F6BE /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03484231E8A5DC900A8F6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D03484281E8A5DC900A8F6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +92,15 @@
 				BBCA8467E5DCAB43B8714F0D /* libPods-Baisi.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D01DDFF01E8F7F3200A05DD1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D01DDFF11E8F7FC900A05DD1 /* NetworkTools.h */,
+				D01DDFF21E8F7FC900A05DD1 /* NetworkTools.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		D034840B1E8A5DC900A8F6BE = {
@@ -179,6 +201,9 @@
 				D0B188EF1E8CA8D600C1C241 /* WYFriendTrendsViewController.h */,
 				D0B188F01E8CA8D600C1C241 /* WYFriendTrendsViewController.m */,
 				D0368E9C1E8E343200CF851E /* WYFriendTrendsViewController.xib */,
+				D01DDFEB1E8F583C00A05DD1 /* WYRecommendViewController.h */,
+				D01DDFEC1E8F583C00A05DD1 /* WYRecommendViewController.m */,
+				D01DDFED1E8F583C00A05DD1 /* WYRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +211,8 @@
 		D0B188C51E8C997900C1C241 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D01DDFF81E8FA3D500A05DD1 /* WYRecommendCategory.h */,
+				D01DDFF91E8FA3D500A05DD1 /* WYRecommendCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,6 +297,7 @@
 				D0B188D11E8C997900C1C241 /* Model */,
 				D0B188D21E8C997900C1C241 /* View */,
 				D0B188E81E8CA5F600C1C241 /* Category */,
+				D01DDFF01E8F7F3200A05DD1 /* Tools */,
 				D0B188D71E8C9A5500C1C241 /* AppDelegate.h */,
 				D0B188D81E8C9A5500C1C241 /* AppDelegate.m */,
 				D0B188E51E8CA4EA00C1C241 /* WYConst.h */,
@@ -343,6 +371,7 @@
 		D0B188E81E8CA5F600C1C241 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				D01DDFF61E8F9FD400A05DD1 /* Foundation+Log.m */,
 				D012EFCB1E8D310900BC28A1 /* UIView+Extension.h */,
 				D012EFCC1E8D310900BC28A1 /* UIView+Extension.m */,
 				D0368EA41E8E552600CF851E /* UIBarButtonItem+Extension.h */,
@@ -421,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01DDFEF1E8F583C00A05DD1 /* WYRecommendViewController.xib in Resources */,
 				D0368E9D1E8E343200CF851E /* WYFriendTrendsViewController.xib in Resources */,
 				D03484241E8A5DC900A8F6BE /* Assets.xcassets in Resources */,
 			);
@@ -482,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D012EFC11E8CEF5500BC28A1 /* WYPublishViewController.m in Sources */,
+				D01DDFEE1E8F583C00A05DD1 /* WYRecommendViewController.m in Sources */,
 				D0B188F41E8CA8F200C1C241 /* WYMeViewController.m in Sources */,
 				D012EFC91E8D213A00BC28A1 /* WYNullViewController.m in Sources */,
 				D0B188DB1E8C9A5500C1C241 /* main.m in Sources */,
@@ -492,8 +523,11 @@
 				D012EFCD1E8D310900BC28A1 /* UIView+Extension.m in Sources */,
 				D0B188DA1E8C9A5500C1C241 /* AppDelegate.m in Sources */,
 				D0368EA61E8E552600CF851E /* UIBarButtonItem+Extension.m in Sources */,
+				D01DDFF31E8F7FC900A05DD1 /* NetworkTools.m in Sources */,
+				D01DDFFA1E8FA3D500A05DD1 /* WYRecommendCategory.m in Sources */,
 				D0B188F11E8CA8D600C1C241 /* WYFriendTrendsViewController.m in Sources */,
 				D0368E9B1E8DE66400CF851E /* WYNavigationController.m in Sources */,
+				D01DDFF71E8F9FD400A05DD1 /* Foundation+Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

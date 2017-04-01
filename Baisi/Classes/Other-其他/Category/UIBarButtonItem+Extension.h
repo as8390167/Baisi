@@ -10,4 +10,8 @@
 
 @interface UIBarButtonItem (Extension)
 
+
++(__kindof UIBarButtonItem *)itemWithImage:(NSString *)image highImage:(NSString *)highImage target:(id)target action:(SEL)action;
+
+
 @end
