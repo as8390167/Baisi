@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -20,26 +17,26 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuT-0a-TKs" userLabel="indicator">
                         <rect key="frame" x="0.0" y="0.0" width="5" height="41"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.1491314172744751" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="5" id="JRR-zt-icm"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJG-32-uJp" userLabel="分割线">
                         <rect key="frame" x="0.0" y="41" width="91" height="1"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Mup-24-9qS"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网红" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19C-my-Qfn">
-                        <rect key="frame" x="28" y="11" width="35" height="21"/>
+                        <rect key="frame" x="29" y="11" width="34" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.30588235294117649" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.37892699241638184" green="0.37893661856651306" blue="0.3789314329624176" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.96567636728286743" green="0.96569901704788208" blue="0.9656868577003479" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="lJG-32-uJp" firstAttribute="top" secondItem="YuT-0a-TKs" secondAttribute="bottom" id="7Ik-DE-sar"/>
                     <constraint firstItem="YuT-0a-TKs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AQ9-66-x69"/>
