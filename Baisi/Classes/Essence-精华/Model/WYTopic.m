@@ -8,6 +8,12 @@
 
 #import "WYTopic.h"
 
+
 @implementation WYTopic
+
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+    
+    return @{@"ID" : @"id"};
+}
 
 @end

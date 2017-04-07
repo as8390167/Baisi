@@ -9,6 +9,7 @@
 #import "WYEssenceViewController.h"
 #import "WYPageTitleView.h"
 #import "WYPageContentView.h"
+#import "WYWordTopicController.h"
 
 @interface WYEssenceViewController()<WYPageTitleViewDelegate,WYPageContentViewDelegate>
 
@@ -28,7 +29,7 @@
         WYPageTitleView *pageTitleView = [[WYPageTitleView alloc] init];
         pageTitleView.titleFont = [UIFont systemFontOfSize:14.0];
         pageTitleView.delegate = self;
-        pageTitleView.frame = CGRectMake(0, 64, WYScreenW, 40);
+        pageTitleView.frame = CGRectMake(0, WYTitlesViewY, WYScreenW, WYTitlesViewH);
         [self.view addSubview:pageTitleView];
         _pageTitleView = pageTitleView;
     }
@@ -39,9 +40,8 @@
 {
     if (!_pageContentView) {
         WYPageContentView *pageContentView = [[WYPageContentView alloc] init];
-        pageContentView.backgroundColor = [UIColor redColor];
-        CGFloat contengH = WYScreenH - 64 - 49 - 40;
-        CGRect contentFrame = CGRectMake(0, 64 + 40, WYScreenW, contengH);
+        CGFloat contentH = WYScreenH - WYTitlesViewY - WYTabBarH - WYTitlesViewH;
+        CGRect contentFrame = CGRectMake(0, WYTitlesViewY + WYTitlesViewH, WYScreenW, contentH);
         pageContentView.frame = contentFrame;
         pageContentView.delegate = self;
         pageContentView.backgroundColor = [UIColor whiteColor];
@@ -64,7 +64,9 @@
     self.pageTitleView.titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     
     NSMutableArray *childVCs = [NSMutableArray array];
-    for (int i = 0; i < self.pageTitleView.titles.count; i++) {
+    WYWordTopicController *word = [[WYWordTopicController alloc] init];
+    [childVCs addObject:word];
+    for (int i = 1; i < self.pageTitleView.titles.count; i++) {
         UIViewController *vc = [[UIViewController alloc] init];
         vc.view.backgroundColor = WYRandomColor;
         [childVCs addObject:vc];

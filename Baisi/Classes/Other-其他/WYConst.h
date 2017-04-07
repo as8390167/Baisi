@@ -15,3 +15,6 @@ typedef enum {
     WYTopicTypeVoice = 31,
     WYTopicTypeVideo = 41
 } WYTopicType;
+UIKIT_EXTERN CGFloat const WYTabBarH;
+UIKIT_EXTERN CGFloat const WYTitlesViewH;
+UIKIT_EXTERN CGFloat const WYTitlesViewY;
