@@ -7,8 +7,33 @@
 //
 
 #import "WYTopicCell.h"
+#import "WYTopic.h"
+
+@interface WYTopicCell()
+
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *createTimeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *topicContentLabel;
+
+
+@end
 
 @implementation WYTopicCell
+
+-(void)setTopic:(WYTopic *)topic
+{
+    _topic = topic;
+    
+    [self.headerImageView setHeader:topic.profile_image];
+    self.nameLabel.text = topic.name;
+    self.createTimeLabel.text = topic.create_time;
+    self.topicContentLabel.text = topic.text;
+    NSLog(@"帖子内容:%@",topic.text);
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];

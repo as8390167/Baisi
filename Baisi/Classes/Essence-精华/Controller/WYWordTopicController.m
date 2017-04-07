@@ -10,6 +10,7 @@
 #import "NetworkTools.h"
 #import <MJExtension.h>
 #import "WYTopic.h"
+#import "WYTopicCell.h"
 
 @interface WYWordTopicController ()
 
@@ -34,6 +35,12 @@ static NSString *TopicCell = @"topic";
     [super viewDidLoad];
     
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, WYTitlesViewH + WYTitlesViewY + WYTabBarH, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([WYTopicCell class]) bundle:nil] forCellReuseIdentifier:TopicCell];
+    // cell的高度设置
+    self.tableView.estimatedRowHeight = 55;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
@@ -66,22 +73,16 @@ static NSString *TopicCell = @"topic";
     return self.topicArr.count;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (self.index == indexPath) {
-        return 120;
-    }
-    return 55;
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 55;
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TopicCell];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TopicCell];
-    }
+    WYTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:TopicCell forIndexPath:indexPath];
     WYTopic *topic = _topicArr[indexPath.row];
-    cell.textLabel.text = topic.text;
+    cell.topic = topic;
     return cell;
 }
 

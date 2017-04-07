@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WYTopic;
 @interface WYTopicCell : UITableViewCell
+
+/** 帖子模型 */
+@property(nonatomic,strong)WYTopic *topic;
 
 @end
