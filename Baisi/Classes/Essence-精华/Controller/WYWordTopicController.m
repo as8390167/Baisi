@@ -36,10 +36,12 @@ static NSString *TopicCell = @"topic";
     
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, WYTitlesViewH + WYTitlesViewY + WYTabBarH, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([WYTopicCell class]) bundle:nil] forCellReuseIdentifier:TopicCell];
-    // cell的高度设置
-    self.tableView.estimatedRowHeight = 55;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
+//    // cell的高度设置
+//    self.tableView.estimatedRowHeight = 55;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
@@ -73,10 +75,11 @@ static NSString *TopicCell = @"topic";
     return self.topicArr.count;
 }
 
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return 55;
-//}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WYTopic *topic = _topicArr[indexPath.row];
+    return topic.cellHeight;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    

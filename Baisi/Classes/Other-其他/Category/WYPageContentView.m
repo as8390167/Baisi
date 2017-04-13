@@ -54,6 +54,7 @@ static NSString *WYContentCellID = @"ContentCellID";
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
+        collectionView.backgroundColor = [UIColor clearColor];
         collectionView.pagingEnabled = YES;
         collectionView.showsHorizontalScrollIndicator = NO;
         collectionView.bounces = NO;
@@ -77,9 +78,9 @@ static NSString *WYContentCellID = @"ContentCellID";
     [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     UIViewController *childVC = _childVCs[indexPath.item];
     childVC.view.frame = cell.contentView.bounds;
-    cell.backgroundColor = [UIColor clearColor];
     [cell.contentView addSubview:childVC.view];
-    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.contentView.backgroundColor = [UIColor clearColor];
     return cell;
 }
 

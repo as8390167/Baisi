@@ -29,6 +29,7 @@
         WYPageTitleView *pageTitleView = [[WYPageTitleView alloc] init];
         pageTitleView.titleFont = [UIFont systemFontOfSize:14.0];
         pageTitleView.delegate = self;
+        pageTitleView.backgroundColor = [UIColor whiteColor];
         pageTitleView.frame = CGRectMake(0, WYTitlesViewY, WYScreenW, WYTitlesViewH);
         [self.view addSubview:pageTitleView];
         _pageTitleView = pageTitleView;
@@ -44,7 +45,7 @@
         CGRect contentFrame = CGRectMake(0, WYTitlesViewY + WYTitlesViewH, WYScreenW, contentH);
         pageContentView.frame = contentFrame;
         pageContentView.delegate = self;
-        pageContentView.backgroundColor = [UIColor whiteColor];
+        pageContentView.backgroundColor = [UIColor clearColor];
         [self.view addSubview:pageContentView];
         self.pageContentView = pageContentView;
     }
@@ -54,7 +55,7 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = WYGlboalBg;
     [self setupUI];
 }
 

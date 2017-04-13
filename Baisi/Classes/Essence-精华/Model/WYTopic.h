@@ -48,4 +48,8 @@
 
 /** 图片的高度 */
 @property (nonatomic, assign) CGFloat height;
+
+//辅助属性
+/** cell的高度 */
+@property(nonatomic,assign,readonly)CGFloat cellHeight;
 @end

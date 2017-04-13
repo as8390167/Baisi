@@ -33,6 +33,7 @@
 		D0B188F11E8CA8D600C1C241 /* WYFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188F01E8CA8D600C1C241 /* WYFriendTrendsViewController.m */; };
 		D0B188F41E8CA8F200C1C241 /* WYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188F31E8CA8F200C1C241 /* WYMeViewController.m */; };
 		E0AB6DE61E913F3D00689BE6 /* WYRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E0AB6DE51E913F3D00689BE6 /* WYRecommendUser.m */; };
+		E0E72F1F1EA0099A00CB4658 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E72F1E1EA0099A00CB4658 /* NSDate+Extension.m */; };
 		E0F848AD1E916DCA008EE633 /* WYRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F848AB1E916DCA008EE633 /* WYRecommendCategoryCell.m */; };
 		E0F848AE1E916DCA008EE633 /* WYRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0F848AC1E916DCA008EE633 /* WYRecommendCategoryCell.xib */; };
 		E0F848B21E917F0B008EE633 /* WYRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F848B01E917F0B008EE633 /* WYRecommendUserCell.m */; };
@@ -93,6 +94,8 @@
 		D0B188F31E8CA8F200C1C241 /* WYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMeViewController.m; sourceTree = "<group>"; };
 		E0AB6DE41E913F3D00689BE6 /* WYRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYRecommendUser.h; sourceTree = "<group>"; };
 		E0AB6DE51E913F3D00689BE6 /* WYRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYRecommendUser.m; sourceTree = "<group>"; };
+		E0E72F1D1EA0099A00CB4658 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		E0E72F1E1EA0099A00CB4658 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		E0F848AA1E916DCA008EE633 /* WYRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYRecommendCategoryCell.h; path = "Baisi/Classes/FriendThrends-关注/Model/WYRecommendCategoryCell.h"; sourceTree = SOURCE_ROOT; };
 		E0F848AB1E916DCA008EE633 /* WYRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYRecommendCategoryCell.m; path = "Baisi/Classes/FriendThrends-关注/Model/WYRecommendCategoryCell.m"; sourceTree = SOURCE_ROOT; };
 		E0F848AC1E916DCA008EE633 /* WYRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WYRecommendCategoryCell.xib; path = "Baisi/Classes/FriendThrends-关注/Model/WYRecommendCategoryCell.xib"; sourceTree = SOURCE_ROOT; };
@@ -428,6 +431,8 @@
 				D012EFCC1E8D310900BC28A1 /* UIView+Extension.m */,
 				D0368EA41E8E552600CF851E /* UIBarButtonItem+Extension.h */,
 				D0368EA51E8E552600CF851E /* UIBarButtonItem+Extension.m */,
+				E0E72F1D1EA0099A00CB4658 /* NSDate+Extension.h */,
+				E0E72F1E1EA0099A00CB4658 /* NSDate+Extension.m */,
 				E0F848B41E9183B8008EE633 /* UIImageView+Extension.h */,
 				E0F848B51E9183B8008EE633 /* UIImageView+Extension.m */,
 			);
@@ -591,6 +596,7 @@
 				D01DDFF31E8F7FC900A05DD1 /* NetworkTools.m in Sources */,
 				D01DDFFA1E8FA3D500A05DD1 /* WYRecommendCategory.m in Sources */,
 				D0B188F11E8CA8D600C1C241 /* WYFriendTrendsViewController.m in Sources */,
+				E0E72F1F1EA0099A00CB4658 /* NSDate+Extension.m in Sources */,
 				D0368E9B1E8DE66400CF851E /* WYNavigationController.m in Sources */,
 				D01DDFF71E8F9FD400A05DD1 /* Foundation+Log.m in Sources */,
 				D09759AF1E95D17600A083C3 /* WYWordTopicController.m in Sources */,
