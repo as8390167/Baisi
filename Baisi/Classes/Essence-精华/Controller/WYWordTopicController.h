@@ -10,4 +10,6 @@
 
 @interface WYWordTopicController : UITableViewController
 
+/** 帖子类型 */
+@property(nonatomic,assign)WYTopicType type;
 @end

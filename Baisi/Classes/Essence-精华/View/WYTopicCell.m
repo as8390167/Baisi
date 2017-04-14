@@ -48,9 +48,9 @@
     self.topicContentLabel.text = topic.text;
     //WYLog(@"帖子内容:%@",topic.text);
     [self setupButtonTitle:self.dingBtn count:topic.ding placeholder:@"顶"];
-    [self setupButtonTitle:self.caiBtn count:topic.ding placeholder:@"踩"];
-    [self setupButtonTitle:self.shareBtn count:topic.ding placeholder:@"分享"];
-    [self setupButtonTitle:self.commentBtn count:topic.ding placeholder:@"评论"];
+    [self setupButtonTitle:self.caiBtn count:topic.cai placeholder:@"踩"];
+    [self setupButtonTitle:self.shareBtn count:topic.repost placeholder:@"分享"];
+    [self setupButtonTitle:self.commentBtn count:topic.comment placeholder:@"评论"];
 }
 
 

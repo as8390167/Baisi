@@ -9,6 +9,7 @@
 #import "WYWordTopicController.h"
 #import "NetworkTools.h"
 #import <MJExtension.h>
+#import <MJRefresh.h>
 #import "WYTopic.h"
 #import "WYTopicCell.h"
 
@@ -17,9 +18,19 @@
 /** 帖子数组 */
 @property(nonatomic,strong)NSMutableArray<WYTopic *> *topicArr;
 
+/** 当加载下一页数据时需要这个参数 */
+@property (nonatomic, copy) NSString *maxtime;
+
+/** 当前页码 */
+@property (nonatomic, assign) NSInteger currentPage;
+
+/** 上一次的请求参数 */
+@property (nonatomic, strong) NSDictionary *params;
 @end
 
 static NSString *TopicCell = @"topic";
+static NSString *TopicUrlStr = @"http://api.budejie.com/api/api_open.php";
+
 @implementation WYWordTopicController
 
 -(NSMutableArray *)topicArr{
@@ -34,38 +45,93 @@ static NSString *TopicCell = @"topic";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupTableView];
+    
+    [self setupRefresh];
+
+}
+
+#pragma mark - 设置tableView
+-(void)setupTableView{
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, WYTitlesViewH + WYTitlesViewY + WYTabBarH, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([WYTopicCell class]) bundle:nil] forCellReuseIdentifier:TopicCell];
-//    // cell的高度设置
-//    self.tableView.estimatedRowHeight = 55;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+
+}
+
+#pragma mark - 设置刷新控件
+-(void)setupRefresh
+{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopic)];
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopic)];
+
+}
+
+/**
+ * 加载帖子最新数据
+ */
+-(void)loadNewTopic
+{
+    [self.tableView.mj_footer endRefreshing];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @(29);
-    [NetworkTools GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    params[@"type"] = @(self.type);
+    self.params = params;
+    [NetworkTools GET:TopicUrlStr parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        // 存储maxtime
+        self.maxtime = responseObject[@"info"][@"maxtime"];
         
         self.topicArr = [WYTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.tableView reloadData];
-        //WYLog(@"%@",responseObject[@"list"]);
+        
+        [self.tableView.mj_header endRefreshing];
+        
+        self.currentPage = 0;
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+        if (self.params != params) return;
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 
--(void)viewWillAppear:(BOOL)animated
+/**
+ * 加载更多帖子数据
+ */
+-(void)loadMoreTopic
 {
-    [super viewWillAppear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.tableView.mj_header endRefreshing];
+    
+    NSInteger page = self.currentPage + 1;
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"data";
+    params[@"type"] = @(self.type);
+    params[@"page"] = @(page);
+    params[@"maxtime"] = self.maxtime;
+    self.params = params;
+    
+    [NetworkTools GET:TopicUrlStr parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        // 存储maxtime
+        self.maxtime = responseObject[@"info"][@"maxtime"];
+        NSArray *moreTopicArr = [WYTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        [self.topicArr addObjectsFromArray:moreTopicArr];
+        
+        [self.tableView reloadData];
+        [self.tableView.mj_footer endRefreshing];
+        self.currentPage = page;
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (self.params != params) return;
+        [self.tableView.mj_footer endRefreshing];
+        
+    }];
 }
 
 #pragma mark - Table view data source
@@ -89,49 +155,5 @@ static NSString *TopicCell = @"topic";
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

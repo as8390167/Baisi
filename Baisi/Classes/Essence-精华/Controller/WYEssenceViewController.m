@@ -66,6 +66,7 @@
     
     NSMutableArray *childVCs = [NSMutableArray array];
     WYWordTopicController *word = [[WYWordTopicController alloc] init];
+    word.type = WYTopicTypeWord;
     [childVCs addObject:word];
     for (int i = 1; i < self.pageTitleView.titles.count; i++) {
         UIViewController *vc = [[UIViewController alloc] init];
