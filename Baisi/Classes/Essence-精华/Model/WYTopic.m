@@ -15,7 +15,11 @@
 }
 +(NSDictionary *)mj_replacedKeyFromPropertyName{
     
-    return @{@"ID" : @"id"};
+    return @{ @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2",
+             @"ID" : @"id"
+            };
 }
 
 -(NSString *)create_time{
@@ -56,7 +60,21 @@
         CGSize maxSize = CGSizeMake(WYScreenW - 2 * WYTopicCellMargin , MAXFLOAT);
         CGFloat textH = [_text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : WYTopicCellFont} context:nil].size.height;
         _cellHeight = WYTopicCellTextY + textH + WYTopicCellMargin;
-        
+        if (self.type == WYTopicTypePicture) {
+            
+            //NSLog(@"宽:%f,高%f",_width,_height);
+            //显示的图片的宽度
+            CGFloat pictureW = maxSize.width;
+            CGFloat pictureH = pictureW * self.height / self.width;
+            if (pictureH >= WYTopicCellPictureMaxH) {
+                pictureH = WYTopicCellPictureBreakH;
+                self.bigPicture = YES;
+            }
+            CGFloat pictureX = WYTopicCellMargin;
+            CGFloat pictureY = WYTopicCellTextY + textH + WYTopicCellMargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            _cellHeight += pictureH + WYTopicCellMargin;
+        }
         _cellHeight += WYTopicCellBottomBarH + WYTopicCellMargin;
         
     }

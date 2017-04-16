@@ -53,7 +53,7 @@ static NSString *TopicUrlStr = @"http://api.budejie.com/api/api_open.php";
 
 #pragma mark - 设置tableView
 -(void)setupTableView{
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, WYTitlesViewH + WYTitlesViewY + WYTabBarH, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(WYTitlesViewH + WYTitlesViewY, 0,  WYTabBarH, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WYShowPictureViewController">
+            <connections>
+                <outlet property="scrollView" destination="MV4-U5-HRM" id="6AQ-sZ-wAS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MV4-U5-HRM">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8K-Qf-ff3" userLabel="返回">
+                    <rect key="frame" x="15" y="40" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="GYu-e3-wAI"/>
+                        <constraint firstAttribute="height" constant="35" id="cFP-6O-Vr1"/>
+                    </constraints>
+                    <state key="normal" image="show_image_back_icon"/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="9vG-mY-BRq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQi-9X-Uj9">
+                    <rect key="frame" x="290" y="622" width="70" height="25"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="Duy-7x-2Bu"/>
+                        <constraint firstAttribute="height" constant="25" id="Sh0-bS-92e"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="保存"/>
+                    <connections>
+                        <action selector="save" destination="-1" eventType="touchUpInside" id="wZD-eW-DDT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISz-ef-PoN">
+                    <rect key="frame" x="200" y="622" width="70" height="25"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="转发"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QQi-9X-Uj9" secondAttribute="bottom" constant="20" id="8Sb-cQ-hLx"/>
+                <constraint firstAttribute="trailing" secondItem="QQi-9X-Uj9" secondAttribute="trailing" constant="15" id="Esl-UV-asK"/>
+                <constraint firstItem="MV4-U5-HRM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FV4-4I-fs1"/>
+                <constraint firstItem="d8K-Qf-ff3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="JVd-My-FJ2"/>
+                <constraint firstItem="QQi-9X-Uj9" firstAttribute="leading" secondItem="ISz-ef-PoN" secondAttribute="trailing" constant="20" id="LdE-9K-oPk"/>
+                <constraint firstItem="ISz-ef-PoN" firstAttribute="width" secondItem="QQi-9X-Uj9" secondAttribute="width" id="bMc-Ta-DNH"/>
+                <constraint firstItem="d8K-Qf-ff3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="eMC-LR-mUJ"/>
+                <constraint firstAttribute="trailing" secondItem="MV4-U5-HRM" secondAttribute="trailing" id="fMo-Er-SJD"/>
+                <constraint firstItem="ISz-ef-PoN" firstAttribute="height" secondItem="QQi-9X-Uj9" secondAttribute="height" id="hDB-wg-nXU"/>
+                <constraint firstItem="MV4-U5-HRM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tmE-py-q1n"/>
+                <constraint firstAttribute="bottom" secondItem="MV4-U5-HRM" secondAttribute="bottom" id="vEw-Vw-Dy5"/>
+                <constraint firstItem="ISz-ef-PoN" firstAttribute="centerY" secondItem="QQi-9X-Uj9" secondAttribute="centerY" id="xfe-eB-Kci"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>

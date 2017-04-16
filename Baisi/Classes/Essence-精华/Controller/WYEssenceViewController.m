@@ -29,7 +29,7 @@
         WYPageTitleView *pageTitleView = [[WYPageTitleView alloc] init];
         pageTitleView.titleFont = [UIFont systemFontOfSize:14.0];
         pageTitleView.delegate = self;
-        pageTitleView.backgroundColor = [UIColor whiteColor];
+        pageTitleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
         pageTitleView.frame = CGRectMake(0, WYTitlesViewY, WYScreenW, WYTitlesViewH);
         [self.view addSubview:pageTitleView];
         _pageTitleView = pageTitleView;
@@ -41,9 +41,9 @@
 {
     if (!_pageContentView) {
         WYPageContentView *pageContentView = [[WYPageContentView alloc] init];
-        CGFloat contentH = WYScreenH - WYTitlesViewY - WYTabBarH - WYTitlesViewH;
-        CGRect contentFrame = CGRectMake(0, WYTitlesViewY + WYTitlesViewH, WYScreenW, contentH);
-        pageContentView.frame = contentFrame;
+       // CGFloat contentH = WYScreenH - WYTitlesViewY - WYTabBarH - WYTitlesViewH;
+       // CGRect contentFrame = CGRectMake(0, WYTitlesViewY + WYTitlesViewH, WYScreenW, contentH);
+        pageContentView.frame = self.view.bounds;//contentFrame;
         pageContentView.delegate = self;
         pageContentView.backgroundColor = [UIColor clearColor];
         [self.view addSubview:pageContentView];
@@ -62,18 +62,23 @@
 
 -(void)setupUI
 {
-    self.pageTitleView.titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
+    NSArray *titles =  @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     
     NSMutableArray *childVCs = [NSMutableArray array];
-    WYWordTopicController *word = [[WYWordTopicController alloc] init];
-    word.type = WYTopicTypeWord;
-    [childVCs addObject:word];
-    for (int i = 1; i < self.pageTitleView.titles.count; i++) {
+    WYWordTopicController *wordTopic = [[WYWordTopicController alloc] init];
+    wordTopic.type = WYTopicTypeWord;
+    [childVCs addObject:wordTopic];
+    WYWordTopicController *pictureWord = [[WYWordTopicController alloc] init];
+    pictureWord.type = WYTopicTypePicture;
+    [childVCs addObject:pictureWord];
+
+    for (int i = 2; i < titles.count; i++) {
         UIViewController *vc = [[UIViewController alloc] init];
         vc.view.backgroundColor = WYRandomColor;
         [childVCs addObject:vc];
     }
     [self.pageContentView parentVC:self childVCs:childVCs];
+    self.pageTitleView.titles = titles;
     
 }
 -(void)pageTitleView:(WYPageTitleView *)pageTitleView selectIndex:(int)index

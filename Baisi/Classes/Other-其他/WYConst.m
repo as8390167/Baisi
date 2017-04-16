@@ -23,3 +23,8 @@ CGFloat const WYTopicCellTextY = 55;
 /** 精华-cell-底部工具条的高度 */
 CGFloat const WYTopicCellBottomBarH = 35;
 
+/** 精华-cell-图片帖子的最大高度 */
+CGFloat const WYTopicCellPictureMaxH = 1000;
+
+/** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
+CGFloat const WYTopicCellPictureBreakH = 250;

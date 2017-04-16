@@ -8,6 +8,7 @@
 
 #import "WYTopicCell.h"
 #import "WYTopic.h"
+#import "WYTopicPictureView.h"
 
 @interface WYTopicCell()
 
@@ -26,9 +27,23 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
+
+/** 图片view */
+@property(nonatomic,weak)WYTopicPictureView *pictureView;
 @end
 
 @implementation WYTopicCell
+
+-(WYTopicPictureView *)pictureView
+{
+    if (!_pictureView) {
+        
+        WYTopicPictureView *pictureView = [WYTopicPictureView viewFromXib];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -51,6 +66,12 @@
     [self setupButtonTitle:self.caiBtn count:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.shareBtn count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentBtn count:topic.comment placeholder:@"评论"];
+    
+    if (topic.type == WYTopicTypePicture) {
+        
+        self.pictureView.topic = topic;
+        self.pictureView.frame = _topic.pictureF;
+    }
 }
 
 

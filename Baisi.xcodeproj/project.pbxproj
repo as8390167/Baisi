@@ -32,6 +32,10 @@
 		D0B188EE1E8CA89E00C1C241 /* WYNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188ED1E8CA89E00C1C241 /* WYNewViewController.m */; };
 		D0B188F11E8CA8D600C1C241 /* WYFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188F01E8CA8D600C1C241 /* WYFriendTrendsViewController.m */; };
 		D0B188F41E8CA8F200C1C241 /* WYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B188F31E8CA8F200C1C241 /* WYMeViewController.m */; };
+		E01D2F5B1EA38609000E122D /* WYTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = E01D2F5A1EA38609000E122D /* WYTopicPictureView.m */; };
+		E01D2F5D1EA3861E000E122D /* WYTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E01D2F5C1EA3861E000E122D /* WYTopicPictureView.xib */; };
+		E01D2F611EA3BF18000E122D /* WYShowPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E01D2F5F1EA3BF18000E122D /* WYShowPictureViewController.m */; };
+		E01D2F621EA3BF18000E122D /* WYShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E01D2F601EA3BF18000E122D /* WYShowPictureViewController.xib */; };
 		E0AB6DE61E913F3D00689BE6 /* WYRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E0AB6DE51E913F3D00689BE6 /* WYRecommendUser.m */; };
 		E0E72F1F1EA0099A00CB4658 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E72F1E1EA0099A00CB4658 /* NSDate+Extension.m */; };
 		E0F848AD1E916DCA008EE633 /* WYRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F848AB1E916DCA008EE633 /* WYRecommendCategoryCell.m */; };
@@ -92,6 +96,12 @@
 		D0B188F01E8CA8D600C1C241 /* WYFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFriendTrendsViewController.m; sourceTree = "<group>"; };
 		D0B188F21E8CA8F200C1C241 /* WYMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMeViewController.h; sourceTree = "<group>"; };
 		D0B188F31E8CA8F200C1C241 /* WYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMeViewController.m; sourceTree = "<group>"; };
+		E01D2F591EA38609000E122D /* WYTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTopicPictureView.h; sourceTree = "<group>"; };
+		E01D2F5A1EA38609000E122D /* WYTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTopicPictureView.m; sourceTree = "<group>"; };
+		E01D2F5C1EA3861E000E122D /* WYTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYTopicPictureView.xib; sourceTree = "<group>"; };
+		E01D2F5E1EA3BF18000E122D /* WYShowPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYShowPictureViewController.h; sourceTree = "<group>"; };
+		E01D2F5F1EA3BF18000E122D /* WYShowPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYShowPictureViewController.m; sourceTree = "<group>"; };
+		E01D2F601EA3BF18000E122D /* WYShowPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYShowPictureViewController.xib; sourceTree = "<group>"; };
 		E0AB6DE41E913F3D00689BE6 /* WYRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYRecommendUser.h; sourceTree = "<group>"; };
 		E0AB6DE51E913F3D00689BE6 /* WYRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYRecommendUser.m; sourceTree = "<group>"; };
 		E0E72F1D1EA0099A00CB4658 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
@@ -205,6 +215,9 @@
 				D0B188E01E8C9B2400C1C241 /* WYEssenceViewController.m */,
 				D09759AD1E95D17600A083C3 /* WYWordTopicController.h */,
 				D09759AE1E95D17600A083C3 /* WYWordTopicController.m */,
+				E01D2F5E1EA3BF18000E122D /* WYShowPictureViewController.h */,
+				E01D2F5F1EA3BF18000E122D /* WYShowPictureViewController.m */,
+				E01D2F601EA3BF18000E122D /* WYShowPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -224,6 +237,9 @@
 				D0A293701E95EEBA0088ACDB /* WYTopicCell.h */,
 				D0A293711E95EEBA0088ACDB /* WYTopicCell.m */,
 				D0A293721E95EEBA0088ACDB /* WYTopicCell.xib */,
+				E01D2F591EA38609000E122D /* WYTopicPictureView.h */,
+				E01D2F5A1EA38609000E122D /* WYTopicPictureView.m */,
+				E01D2F5C1EA3861E000E122D /* WYTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,7 +529,9 @@
 				D01DDFEF1E8F583C00A05DD1 /* WYRecommendViewController.xib in Resources */,
 				D0368E9D1E8E343200CF851E /* WYFriendTrendsViewController.xib in Resources */,
 				D03484241E8A5DC900A8F6BE /* Assets.xcassets in Resources */,
+				E01D2F621EA3BF18000E122D /* WYShowPictureViewController.xib in Resources */,
 				E0F848B31E917F0B008EE633 /* WYRecommendUserCell.xib in Resources */,
+				E01D2F5D1EA3861E000E122D /* WYTopicPictureView.xib in Resources */,
 				D0A293741E95EEBA0088ACDB /* WYTopicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,8 +600,10 @@
 				D012EFC91E8D213A00BC28A1 /* WYNullViewController.m in Sources */,
 				D0B188DB1E8C9A5500C1C241 /* main.m in Sources */,
 				E0F848AD1E916DCA008EE633 /* WYRecommendCategoryCell.m in Sources */,
+				E01D2F5B1EA38609000E122D /* WYTopicPictureView.m in Sources */,
 				E0F848BC1E91A647008EE633 /* WYPageTitleView.m in Sources */,
 				E0F848B91E918AA4008EE633 /* WYPageContentView.m in Sources */,
+				E01D2F611EA3BF18000E122D /* WYShowPictureViewController.m in Sources */,
 				D0B188EE1E8CA89E00C1C241 /* WYNewViewController.m in Sources */,
 				D012EFCA1E8D213A00BC28A1 /* WYTabBarController.m in Sources */,
 				D0B188E11E8C9B2400C1C241 /* WYEssenceViewController.m in Sources */,

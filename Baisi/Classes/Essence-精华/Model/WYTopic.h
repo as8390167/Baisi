@@ -49,7 +49,22 @@
 /** 图片的高度 */
 @property (nonatomic, assign) CGFloat height;
 
+/** 小图片的URL */
+@property (nonatomic, copy) NSString *small_image;
+
+/** 中图片的URL */
+@property (nonatomic, copy) NSString *middle_image;
+
+/** 大图片的URL */
+@property (nonatomic, copy) NSString *large_image;
+
 //辅助属性
 /** cell的高度 */
 @property(nonatomic,assign,readonly)CGFloat cellHeight;
+
+/** 图片控件的frame */
+@property(nonatomic,assign)CGRect pictureF;
+
+/** 图片是否太大 */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 @end
